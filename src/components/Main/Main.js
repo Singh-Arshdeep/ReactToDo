@@ -1,16 +1,16 @@
 import React from 'react';
+// import ContactCard from '../Etc/ContactCard';
+import productData from '../../productData';
+import Product from '../Etc/Product'
+
+const productComponenets =productData.map(
+    (data)=> <Product key={data.key} name={data.name} price={data.price} desc={data.desc}/>
+);
 
 function Main() {
-    const fname = "Arsh";
-    const lname = "deep";
     return(
         <div>
-            <input type="checkbox"/>
-            <p>Item1 {fname+" "+lname}</p>
-            <input type="checkbox"/>
-            <p>Item2</p>
-            <input type="checkbox"/>
-            <p>Item3</p>
+          {productComponenets}
         </div>
     );
 }

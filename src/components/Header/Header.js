@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Header() {
+function Header(props) {
     return(
-        <header className="navBar">To Do App</header>
+    <header className="navBar">To Do App {props.count}</header>
     );
 }
 
